@@ -19,18 +19,33 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uJv-NC-6Ag" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uJv-NC-6Ag" firstAttribute="bottom" secondItem="T3W-AI-lQW" secondAttribute="top" id="I5x-5Q-oSg"/>
                             <constraint firstAttribute="trailing" secondItem="uJv-NC-6Ag" secondAttribute="trailing" id="gxe-6i-MzT"/>
                             <constraint firstItem="uJv-NC-6Ag" firstAttribute="top" secondItem="K7D-J2-Tgg" secondAttribute="top" id="nFT-79-Rra"/>
                             <constraint firstItem="uJv-NC-6Ag" firstAttribute="leading" secondItem="K7D-J2-Tgg" secondAttribute="leading" id="vDO-fx-Vd4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nbF-8Y-M2J" appends="YES" id="vyj-vj-N9B"/>
+                            <outletCollection property="gestureRecognizers" destination="nbF-8Y-M2J" appends="YES" id="ctc-Qn-txC"/>
+                            <outletCollection property="gestureRecognizers" destination="nbF-8Y-M2J" appends="YES" id="zKU-ms-Tn1"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="uJv-NC-6Ag" id="47r-RA-66F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roJ-B8-NMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="nbF-8Y-M2J">
+                    <connections>
+                        <action selector="changeHappiness:" destination="wG0-OK-pej" id="z56-J3-OjY"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="243" y="329"/>
         </scene>
